@@ -48,7 +48,7 @@ Do not forget to set the load_path in [./utils/config.py](https://github.com/xia
 python test.py --modelname SAMUS --task <your dataset config name>
 ```
 
-## Citing
+## Citation
 If our SAMUS is helpful to you, please consider citing:
 ```
 @misc{lin2023samus,
