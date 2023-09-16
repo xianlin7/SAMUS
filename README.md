@@ -38,10 +38,10 @@ We use checkpoint of SAM in [`vit_b`](https://github.com/facebookresearch/segmen
 
 ## Training
 Once you have the data ready, you can start training the model.
-    ```
-    cd "/home/...  .../SAMUS/"
-    python train.py --modelname SAMUS --task <your dataset config name>
-    ```
+```
+cd "/home/...  .../SAMUS/"
+python train.py --modelname SAMUS --task <your dataset config name>
+```
 ## Testing
 Do not forget to set the load_path in [./utils/config.py](https://github.com/xianlin7/SAMUS/blob/main/utils/config.py) before testing.
 ```
