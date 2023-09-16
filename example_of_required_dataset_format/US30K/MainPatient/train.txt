@@ -1,0 +1,6 @@
+1/Breast-BUSI/benign0046
+1/ThyroidNodule-TN3K/trainval0001
+1/ThyroidNodule-TG3K/trainval0000
+1/Echocardiography-CAMUS/0055_2CH_000
+2/Echocardiography-CAMUS/0055_2CH_000
+3/Echocardiography-CAMUS/0055_2CH_000
