@@ -50,7 +50,6 @@ def main():
 
     args = parser.parse_args()
     opt = get_config(args.task)  # please configure your hyper-parameter
-    opt.load_path = "checkpoints/SAMUS/MSA_06160706_124_0.8508288315941293.pth"
     print("task", args.task, "checkpoints:", opt.load_path)
     opt.mode = "val"
     #opt.classes=2
