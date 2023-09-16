@@ -22,11 +22,41 @@ Following [Segment Anything](https://github.com/facebookresearch/segment-anythin
     conda activate SAMUS
     ```
 3. Install Pytorch and TorchVision.
-   (you can follow the instructions [👉](https://pytorch.org/get-started/locally/))
+   (you can follow the instructions [here](https://pytorch.org/get-started/locally/))
 5. Install other dependencies.
   ```
     pip install -r requirements.txt
   ```
+## Checkpoints
+We use checkpoint of SAM in `vit_b` version [here](https://github.com/facebookresearch/segment-anything)
 
-## Dataset
-US30K consists of seven publicly-available datasets, including [TN3K]( https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [DDTI]( https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [TG3K](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [BUSI](https://scholar.cu.edu.eg/?q=afahmy/pages/dataset), [UDIAT](http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php), [CAMUS](http://camus.creatis.insa-lyon.fr/challenge/), and [HMC-QU](https://aistudio.baidu.com/aistudio/datasetdetail/102406).
+## Data
+- US30K consists of seven publicly-available datasets, including [TN3K]( https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [DDTI]( https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [TG3K](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [BUSI](https://scholar.cu.edu.eg/?q=afahmy/pages/dataset), [UDIAT](http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php), [CAMUS](http://camus.creatis.insa-lyon.fr/challenge/), and [HMC-QU](https://aistudio.baidu.com/aistudio/datasetdetail/102406).\
+- No special pre-processed methods are used in data preparation.\
+- We have provided some examples to help you organize your data. Please refer to the file fold [example_of_required_dataset_format](https://github.com/xianlin7/SAMUS/tree/main/example_of_required_dataset_format)
+- The relevant information of your data should be set in [./utils/config.py](https://github.com/xianlin7/SAMUS/blob/main/utils/config.py)
+
+## Training
+Once you have the data ready, you can start training the model.
+    ```
+    cd "/home/...  .../SAMUS/"
+    python train.py --modelname SAMUS --task <your dataset config name>
+    ```
+## Testing
+Do not forget to set the load_path in [./utils/config.py](https://github.com/xianlin7/SAMUS/blob/main/utils/config.py) before testing.
+```
+python test.py --modelname SAMUS --task <your dataset config name>
+```
+
+## Citing
+If our SAMUS is helpful to you, please consider citing:
+```
+@misc{lin2023samus,
+      title={SAMUS: Adapting Segment Anything Model for Clinically-Friendly and Generalizable Ultrasound Image Segmentation}, 
+      author={Xian Lin and Yangyang Xiang and Li Zhang and Xin Yang and Zengqiang Yan and Li Yu},
+      year={2023},
+      eprint={2309.06824},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
