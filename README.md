@@ -28,7 +28,7 @@ Following [Segment Anything](https://github.com/facebookresearch/segment-anythin
     pip install -r requirements.txt
   ```
 ## Checkpoints
-We use checkpoint of SAM in `vit_b` version [here](https://github.com/facebookresearch/segment-anything)
+We use checkpoint of SAM in [`vit_b`](https://github.com/facebookresearch/segment-anything) version.
 
 ## Data
 - US30K consists of seven publicly-available datasets, including [TN3K]( https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [DDTI]( https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [TG3K](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [BUSI](https://scholar.cu.edu.eg/?q=afahmy/pages/dataset), [UDIAT](http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php), [CAMUS](http://camus.creatis.insa-lyon.fr/challenge/), and [HMC-QU](https://aistudio.baidu.com/aistudio/datasetdetail/102406).\
