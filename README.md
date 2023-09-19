@@ -32,9 +32,12 @@ We use checkpoint of SAM in [`vit_b`](https://github.com/facebookresearch/segmen
 
 ## Data
 - US30K consists of seven publicly-available datasets, including [TN3K]( https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [DDTI]( https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [TG3K](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [BUSI](https://scholar.cu.edu.eg/?q=afahmy/pages/dataset), [UDIAT](http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php), [CAMUS](http://camus.creatis.insa-lyon.fr/challenge/), and [HMC-QU](https://aistudio.baidu.com/aistudio/datasetdetail/102406).
-- No special pre-processed methods are used in data preparation.
-- We have provided some examples to help you organize your data. Please refer to the file fold [example_of_required_dataset_format](https://github.com/xianlin7/SAMUS/tree/main/example_of_required_dataset_format)
-- The relevant information of your data should be set in [./utils/config.py](https://github.com/xianlin7/SAMUS/blob/main/utils/config.py)
+- All images were saved in PNG format. No special pre-processed methods are used in data preparation.
+- We have provided some examples to help you organize your data. Please refer to the file fold [example_of_required_dataset_format](https://github.com/xianlin7/SAMUS/tree/main/example_of_required_dataset_format) Specifically, each line in train/val.txt should be formatted as follows:
+  ```
+    <class ID>/<dataset file folder name>/<image file name>
+  ```
+- The relevant information of your data should be set in [./utils/config.py](https://github.com/xianlin7/SAMUS/blob/main/utils/config.py) 
 
 ## Training
 Once you have the data ready, you can start training the model.
