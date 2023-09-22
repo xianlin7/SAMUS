@@ -102,15 +102,18 @@ def random_bbox(mask, class_id=1, img_size=256):
     if indices.shape[0] ==0:
         return np.array([-1, -1, img_size, img_size])
 
-    shiftw = randint(-int(0.9*img_size), int(1.1*img_size))
-    shifth = randint(-int(0.9*img_size), int(1.1*img_size))
-    shiftx = randint(-int(0.05*img_size), int(0.05*img_size))
-    shifty = randint(-int(0.05*img_size), int(0.05*img_size))
-
     minx = np.min(indices[:, 0])
     maxx = np.max(indices[:, 0])
     miny = np.min(indices[:, 1])
     maxy = np.max(indices[:, 1])
+
+    classw_size = maxx-minx+1
+    classh_size = maxy-miny+1
+
+    shiftw = randint(int(0.95*classw_size), int(1.05*classw_size))
+    shifth = randint(int(0.95*classh_size), int(1.05*classh_size))
+    shiftx = randint(-int(0.05*classw_size), int(0.05*classw_size))
+    shifty = randint(-int(0.05*classh_size), int(0.05*classh_size))
 
     new_centerx = (minx + maxx)//2 + shiftx
     new_centery = (miny + maxy)//2 + shifty
