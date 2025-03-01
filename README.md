@@ -6,8 +6,8 @@ This repo is the official implementation for:\
 ## Highlights
 🏆 Low GPU requirements. (one 3090ti with 24G GPU memory is enough)\
 🏆 Large ultrasound dataset. (about 30K images and 69K masks covering 6 categories)\
-🏆 Excellent performance, especially in generalization ability.
-✨ We have released the pre-trained model in [SAMUS](https://drive.google.com/file/d/1nQjMAvbPeolNpCxQyU_HTiOiB5704pkH/view?usp=sharing).
+🏆 Excellent performance, especially in generalization ability.\
+✨ We have released the pre-trained model in [SAMUS](https://drive.google.com/file/d/1nQjMAvbPeolNpCxQyU_HTiOiB5704pkH/view?usp=sharing).\
 ✨ We have released the preprocessed dataset in [US30K](https://drive.google.com/file/d/13MUXQIyCXqNscIKTLRIEHKtpak6MJby_/view?usp=sharing).
 
 ## Installation
