@@ -7,6 +7,8 @@ This repo is the official implementation for:\
 🏆 Low GPU requirements. (one 3090ti with 24G GPU memory is enough)\
 🏆 Large ultrasound dataset. (about 30K images and 69K masks covering 6 categories)\
 🏆 Excellent performance, especially in generalization ability.
+✨ We have released the pre-trained model in [SAMUS](https://drive.google.com/file/d/1nQjMAvbPeolNpCxQyU_HTiOiB5704pkH/view?usp=sharing).
+✨ We have released the preprocessed dataset in [US30K](https://drive.google.com/file/d/13MUXQIyCXqNscIKTLRIEHKtpak6MJby_/view?usp=sharing).
 
 ## Installation
 Following [Segment Anything](https://github.com/facebookresearch/segment-anything), `python=3.8.16`, `pytorch=1.8.0`, and `torchvision=0.9.0` are used in SAMUS.
@@ -28,12 +30,14 @@ Following [Segment Anything](https://github.com/facebookresearch/segment-anythin
     pip install -r requirements.txt
   ```
 ## Checkpoints
-We use checkpoint of SAM in [`vit_b`](https://github.com/facebookresearch/segment-anything) version.
+- We use checkpoint of SAM in [`vit_b`](https://github.com/facebookresearch/segment-anything) version.
+- The trained SAMUS can be downloaded [here](https://drive.google.com/file/d/1nQjMAvbPeolNpCxQyU_HTiOiB5704pkH/view?usp=sharing).
 
 ## Data
 - US30K consists of seven publicly-available datasets, including [TN3K]( https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [DDTI]( https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [TG3K](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation), [BUSI](https://scholar.cu.edu.eg/?q=afahmy/pages/dataset), [UDIAT](http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php), [CAMUS](http://camus.creatis.insa-lyon.fr/challenge/), and [HMC-QU](https://aistudio.baidu.com/aistudio/datasetdetail/102406).
+- The preprocessed US30K can be downloaded [here](https://drive.google.com/file/d/13MUXQIyCXqNscIKTLRIEHKtpak6MJby_/view?usp=sharing).
 - All images were saved in PNG format. No special pre-processed methods are used in data preparation.
-- We have provided some examples to help you organize your data. Please refer to the file fold [example_of_required_dataset_format](https://github.com/xianlin7/SAMUS/tree/main/example_of_required_dataset_format).\
+- We have provided some examples to help you organize your data. Please refer to the file folder [example_of_required_dataset_format](https://github.com/xianlin7/SAMUS/tree/main/example_of_required_dataset_format).\
   Specifically, each line in train/val.txt should be formatted as follows:
   ```
     <class ID>/<dataset file folder name>/<image file name>
